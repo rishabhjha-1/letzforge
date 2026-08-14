@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── DESIGN TOKENS (dark-first) ─────────────── */
+:root {
+  --bg:          #08080A;
+  --surface:     #101014;
+  --surface-2:   #17171E;
+  --border:      #1C1C26;
+  --text:        #E8E8EC;
+  --muted:       #56566A;
+  --accent:      #FF5C1A;
+  --accent-bg:   rgba(255,92,26,0.08);
+  --accent-glow: rgba(255,92,26,0.20);
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg:          #F4F4F2;
+    --surface:     #FFFFFF;
+    --surface-2:   #ECEAE6;
+    --border:      #D8D8D0;
+    --text:        #0C0C10;
+    --muted:       #878798;
+    --accent:      #D94008;
+    --accent-bg:   rgba(217,64,8,0.07);
+    --accent-glow: rgba(217,64,8,0.15);
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg:          #08080A;
+  --surface:     #101014;
+  --surface-2:   #17171E;
+  --border:      #1C1C26;
+  --text:        #E8E8EC;
+  --muted:       #56566A;
+  --accent:      #FF5C1A;
+  --accent-bg:   rgba(255,92,26,0.08);
+  --accent-glow: rgba(255,92,26,0.20);
+}
+
+:root[data-theme="light"] {
+  --bg:          #F4F4F2;
+  --surface:     #FFFFFF;
+  --surface-2:   #ECEAE6;
+  --border:      #D8D8D0;
+  --text:        #0C0C10;
+  --muted:       #878798;
+  --accent:      #D94008;
+  --accent-bg:   rgba(217,64,8,0.07);
+  --accent-glow: rgba(217,64,8,0.15);
+}
+
+/* ─── BASE ────────────────────────────────────── */
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ─── UTILITIES ───────────────────────────────── */
+.eyebrow {
+  @apply flex items-center gap-2 text-accent font-bold uppercase tracking-widest2 text-[0.66rem] mb-8;
+}
+.eyebrow::after {
+  content: '';
+  @apply block w-8 h-px bg-accent;
+}
+
+.section-title {
+  @apply font-black tracking-tight leading-[1.05] text-primary;
+  font-size: clamp(1.75rem, 4vw, 3.25rem);
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.hero-num {
+  font-size: clamp(4.5rem, 12.5vw, 13rem);
+  font-weight: 900;
+  line-height: 0.88;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+/* ─── ANIMATIONS ──────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee  { animation: none; }
+  .animate-nodeGlow { animation: none; }
+  html { scroll-behavior: auto; }
+}
