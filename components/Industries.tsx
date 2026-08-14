@@ -14,6 +14,11 @@ const industries = [
     name: "Wellness & Hospitality",
     desc: "Booking systems, partner portals, and guest-experience platforms for people-first businesses. Warm front-ends over serious backend logic.",
   },
+  {
+    num: "Industry / 04",
+    name: "Gym & Fitness SaaS",
+    desc: "Member management portals, class scheduling, trainer dashboards, and mobile-first interfaces for gyms, fitness studios, and wellness platforms scaling fast.",
+  },
 ];
 
 export default function Industries() {
@@ -22,7 +27,7 @@ export default function Industries() {
       <div className="eyebrow">Industries</div>
       <h2 className="section-title mb-10">Deep domain. Real context.</h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
         {industries.map((ind) => (
           <div
             key={ind.name}

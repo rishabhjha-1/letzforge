@@ -1,7 +1,8 @@
 const items = [
   "SaaS Design", "ERP Systems", "AI Agents", "MCP Integration",
-  "Workflow Automation", "Brand Identity", "Design Systems",
-  "Fintech UX", "LLM Pipelines", "Multi-Agent Systems",
+  "Landing Pages", "SEO Specialist", "Workflow Automation",
+  "Brand Identity", "Design Systems", "Fintech UX",
+  "Gym & Fitness SaaS", "LLM Pipelines", "Multi-Agent Systems",
   "Content Design", "Agentic Workflows", "UX Strategy", "Product Design",
 ];
 

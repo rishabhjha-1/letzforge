@@ -1,8 +1,13 @@
+"use client";
+import { useContact } from "@/context/ContactContext";
+
 export default function CTA() {
+  const { openModal } = useContact();
+
   return (
     <section
       id="contact"
-      className="border-t border-border text-center relative overflow-hidden px-12"
+      className="border-t border-border text-center relative overflow-hidden"
       style={{ padding: "9rem 3rem" }}
     >
       {/* Glow */}
@@ -24,21 +29,21 @@ export default function CTA() {
           Let&rsquo;s forge<br />something great.
         </h2>
         <div className="flex gap-4 justify-center flex-wrap">
-          <a
-            href="mailto:hello@letzforge.com"
-            className="bg-accent text-white no-underline px-9 py-3.5 rounded-sm
+          <button
+            onClick={openModal}
+            className="bg-accent text-white px-9 py-3.5 rounded-sm
                        text-[0.78rem] font-bold tracking-[0.1em] uppercase
-                       hover:opacity-85 transition-opacity duration-200"
+                       hover:opacity-85 transition-opacity duration-200 cursor-pointer"
           >
             Start a project
-          </a>
+          </button>
           <a
-            href="#"
+            href="#team"
             className="text-primary no-underline px-9 py-3.5 rounded-sm
                        border border-border text-[0.78rem] font-bold tracking-[0.1em] uppercase
                        hover:border-accent hover:text-accent transition-colors duration-200"
           >
-            See our process
+            Meet the team
           </a>
         </div>
       </div>

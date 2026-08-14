@@ -1,10 +1,19 @@
+import { LogoMark } from "@/components/Logo";
+
 const links = ["Work", "Services", "About", "Contact"];
 
 export default function Footer() {
   return (
     <footer className="bg-bg border-t border-border px-12 py-9 flex flex-col md:flex-row items-center justify-between gap-6">
-      <div className="text-[0.9rem] font-black tracking-[0.12em] uppercase text-primary">
-        Letz<span className="text-accent">forge</span>
+      <div className="flex items-center gap-3">
+        <LogoMark size={24} />
+        <span
+          className="font-black uppercase"
+          style={{ fontSize: "0.9rem", letterSpacing: "-0.02em" }}
+        >
+          <span className="text-primary">Letz</span>
+          <span className="text-accent">forge</span>
+        </span>
       </div>
       <p className="text-muted text-[0.68rem] tracking-[0.04em]">
         &copy; {new Date().getFullYear()} Letzforge Studio — All rights reserved.

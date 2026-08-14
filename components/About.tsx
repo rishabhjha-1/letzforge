@@ -1,5 +1,5 @@
 const metrics = [
-  { num: "4+", label: "Products shipped" },
+  { num: "40+", label: "Projects delivered" },
   { num: "3×", label: "Avg. efficiency gain" },
   { num: "AI", label: "Native in every product" },
   { num: "0%", label: "Cookie-cutter templates" },

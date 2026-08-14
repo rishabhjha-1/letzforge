@@ -3,4 +3,5 @@ node_modules/
 .claude/
 .env
 .env.local
+data/
 *.log

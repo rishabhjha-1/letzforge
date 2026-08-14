@@ -24,7 +24,7 @@ export default function Hero() {
       {/* Tag */}
       <div className="relative flex items-center gap-3 text-accent text-[0.7rem] font-bold tracking-[0.22em] uppercase mb-11">
         <span className="block w-10 h-px bg-accent" />
-        Digital Agency &mdash; SaaS · ERP · AI
+        Digital Agency &mdash; SaaS · ERP · AI · SEO · Landing Pages
       </div>
 
       {/* Headline */}
@@ -46,7 +46,7 @@ export default function Hero() {
           <span className="text-muted text-[0.62rem] tracking-[0.2em] uppercase font-semibold mb-1">
             Industries served
           </span>
-          {["Fintech & Insurance", "Leather & Manufacturing", "Hospitality Tech", "Healthcare & Wellness"].map((c) => (
+          {["Fintech & Insurance", "Leather & Manufacturing", "Gym & Fitness SaaS", "Hospitality Tech", "Healthcare & Wellness"].map((c) => (
             <span
               key={c}
               className="text-muted text-[0.68rem] tracking-[0.08em] uppercase font-semibold
